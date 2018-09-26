@@ -6,7 +6,7 @@ var os = require("os");
 var CIDR = require('cidr-js');
 
 var url = "https://ip-ranges.amazonaws.com/ip-ranges.json"
-var localWebServerPort = 9615
+var localWebServerPort = process.env.port || 9615;
 var cidr = new CIDR();
 
 request({
